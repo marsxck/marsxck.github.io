@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mars的技术博客</title>
   
-  <subtitle>someth just like this</subtitle>
+  <subtitle>Something just like this</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
