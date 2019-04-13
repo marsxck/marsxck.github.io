@@ -1,70 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>http之一</title>
-      <link href="/2019/04/12/%E5%9B%BE%E8%A7%A3http1/"/>
-      <url>/2019/04/12/%E5%9B%BE%E8%A7%A3http1/</url>
-      
-        <content type="html"><![CDATA[<p>之前陆陆续续学了一些关于http的知识，现在准备系统看一下。</p><h1 id="http方法"><a href="#http方法" class="headerlink" title="http方法"></a>http方法</h1><table><thead><tr><th style="text-align:center">方法</th><th style="text-align:center">说明</th><th style="text-align:center">支持的http版本</th></tr></thead><tbody><tr><td style="text-align:center">GET</td><td style="text-align:center">获取资源</td><td style="text-align:center">1.0/1.1</td></tr><tr><td style="text-align:center">POST</td><td style="text-align:center">传输实体主题</td><td style="text-align:center">1.0/1.1</td></tr><tr><td style="text-align:center">PUT</td><td style="text-align:center">传输文件</td><td style="text-align:center">1.0/1.1</td></tr><tr><td style="text-align:center">HEAD</td><td style="text-align:center">获得首部</td><td style="text-align:center">1.0/1.1</td></tr><tr><td style="text-align:center">DELETE</td><td style="text-align:center">删除文件</td><td style="text-align:center">1.0/1.1</td></tr><tr><td style="text-align:center">OPTIONS</td><td style="text-align:center">询问服务器支持的方法</td><td style="text-align:center">1.1</td></tr><tr><td style="text-align:center">TRACE</td><td style="text-align:center">追踪路径</td><td style="text-align:center">1.1</td></tr><tr><td style="text-align:center">CONNECT</td><td style="text-align:center">隧道协议代理</td><td style="text-align:center">1.1</td></tr><tr><td style="text-align:center">LINK</td><td style="text-align:center">建立和资源之间的联系</td><td style="text-align:center">1.0</td></tr><tr><td style="text-align:center">UNLINK</td><td style="text-align:center">断开连接关系</td><td style="text-align:center">1.0</td></tr></tbody></table><h1 id="http长连接"><a href="#http长连接" class="headerlink" title="http长连接"></a>http长连接</h1><p>由于短链接状态下，每次请求资源都会进行tcp的握手和挥手，当前的页面上一般会包含很多资源，使用短连接将会大大增加开销。<br><strong>长连接</strong>：在双方没有明确提出断开连接的情况下，保持连接。（http1.1默认长连接）</p><h1 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h1><p>Cookie意为“甜饼”，是由W3C组织提出，最早由Netscape社区发展的一种机制。目前Cookie已经成为标准，所有的主流浏览器如IE、Netscape、Firefox、Opera等都支持Cookie。</p><p>由于HTTP是一种无状态的协议，服务器单从网络连接上无从知道客户身份。怎么办呢？就给客户端们颁发一个通行证吧，每人一个，无论谁访问都必须携带自己通行证。这样服务器就能从通行证上确认客户身份了。这就是Cookie的工作原理。</p><p>Cookie实际上是一小段的文本信息。客户端请求服务器，如果服务器需要记录该用户状态，就使用response向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。服务器还可以根据需要修改Cookie的内容。<br><img src="https://images.cnblogs.com/cnblogs_com/andy-zhou/811282/o_Cookie_Session002.jpg" alt></p><p>请求报文(不包含Cookie)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /reader/ HTTP/ 1.1 </span><br><span class="line">Host: hackr.jp </span><br><span class="line">*首部字段内没有Cookie的相关信息</span><br></pre></td></tr></table></figure></p><p>响应报文(服务器端生成Cookies)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/ 1.1 200 OK </span><br><span class="line">Date: Thu, 12 Jul 2012 07: 12: 20 GMT </span><br><span class="line">Server: Apache </span><br><span class="line">＜ Set-Cookie: sid = 1342077140226724; path =/; expires = Wed, 10-Oct-12 07: 12: 20 GMT ＞ </span><br><span class="line">Content-Type: text/ plain; charset = UTF-8</span><br></pre></td></tr></table></figure></p><p>请求报文(自动发送保存的Cookies)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /image/ HTTP/ 1.1 </span><br><span class="line">Host: hackr.jp </span><br><span class="line">Cookie: sid = 1342077140226724</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Python将图片转换为base64编码]]></title>
+    <url>%2F2019%2F04%2F13%2FPython%E5%B0%86%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[markdown插入图片可以采用base64的方式，写一个小工具可以方便使用 获取文件路径获取文件的路径选择了图形界面，比之命令行更好操作 TkinterTkinter 是使用 python 进行窗口视窗设计的模块.简单的构造, 多平台, 多系统的兼容性, 选择它作为文件选取.12345import tkinter as tkfrom tkinter import filedialogroot = tk.Tk()root.withdraw()file_path = filedialog.askopenfilename() base64在Markdown下插入图片共有3种方式： 插入本地图片 插入网络图片 将图片存入Markdown Base64编码可用于在HTTP环境下传递较长的标识信息，是一种用64个字符来表示任意二进制数据的方法。用记事本打开exe、jpg、pdf这些文件时，我们都会看到一大堆乱码，因为二进制文件包含很多无法显示和打印的字符，所以，如果要让记事本这样的文本处理软件能处理二进制数据，就需要一个二进制到字符串的转换方法。Base64是一种最常见的二进制编码方法。 python实现12345import base64f=open(&apos;723.png&apos;,&apos;rb&apos;) #二进制方式打开图文件ls_f=base64.b64encode(f.read()) #读取文件内容，转换为base64编码f.close()print(ls_f) 复制到剪贴板直接copy岂不快哉?1234567import win32clipboard as wimport win32condef setText(aString): # 写入剪切板 w.OpenClipboard() w.EmptyClipboard() w.SetClipboardData(win32con.CF_TEXT, aString) w.CloseClipboard() 完整工具12345678910111213141516import base64import tkinter as tkfrom tkinter import filedialogimport win32clipboard as wimport win32conroot = tk.Tk() # 创建一个实例root.withdraw() # 隐藏窗口file_path = filedialog.askopenfilename() # 获取路径f = open(file_path, &apos;rb&apos;) # y以二进制形式打开ls_f = base64.b64encode(f.read()) # 读取文件，转换为64位编码f.close()w.OpenClipboard()w.EmptyClipboard()w.SetClipboardData(win32con.CF_TEXT, ls_f)w.CloseClipboard() 最后使用pyinstaller打包，明天试试好不好用]]></content>
       <categories>
-          
-          <category> 读书笔记《图解http》 </category>
-          
+        <category>python小工具</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> web http </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/04/11/hello-world%20(2)/"/>
-      <url>/2019/04/11/hello-world%20(2)/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/04/11/hello-world/"/>
-      <url>/2019/04/11/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>python 图像 base64</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[http之一]]></title>
+    <url>%2F2019%2F04%2F12%2F%E5%9B%BE%E8%A7%A3http1%2F</url>
+    <content type="text"><![CDATA[之前陆陆续续学了一些关于http的知识，现在准备系统看一下。 http方法 方法 说明 支持的http版本 GET 获取资源 1.0/1.1 POST 传输实体主题 1.0/1.1 PUT 传输文件 1.0/1.1 HEAD 获得首部 1.0/1.1 DELETE 删除文件 1.0/1.1 OPTIONS 询问服务器支持的方法 1.1 TRACE 追踪路径 1.1 CONNECT 隧道协议代理 1.1 LINK 建立和资源之间的联系 1.0 UNLINK 断开连接关系 1.0 http长连接由于短链接状态下，每次请求资源都会进行tcp的握手和挥手，当前的页面上一般会包含很多资源，使用短连接将会大大增加开销。长连接：在双方没有明确提出断开连接的情况下，保持连接。（http1.1默认长连接） CookieCookie意为“甜饼”，是由W3C组织提出，最早由Netscape社区发展的一种机制。目前Cookie已经成为标准，所有的主流浏览器如IE、Netscape、Firefox、Opera等都支持Cookie。 由于HTTP是一种无状态的协议，服务器单从网络连接上无从知道客户身份。怎么办呢？就给客户端们颁发一个通行证吧，每人一个，无论谁访问都必须携带自己通行证。这样服务器就能从通行证上确认客户身份了。这就是Cookie的工作原理。 Cookie实际上是一小段的文本信息。客户端请求服务器，如果服务器需要记录该用户状态，就使用response向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。服务器还可以根据需要修改Cookie的内容。 请求报文(不包含Cookie)123GET /reader/ HTTP/ 1.1 Host: hackr.jp *首部字段内没有Cookie的相关信息 响应报文(服务器端生成Cookies)12345HTTP/ 1.1 200 OK Date: Thu, 12 Jul 2012 07: 12: 20 GMT Server: Apache ＜ Set-Cookie: sid = 1342077140226724; path =/; expires = Wed, 10-Oct-12 07: 12: 20 GMT ＞ Content-Type: text/ plain; charset = UTF-8 请求报文(自动发送保存的Cookies)123GET /image/ HTTP/ 1.1 Host: hackr.jp Cookie: sid = 1342077140226724]]></content>
       <categories>
-          
-          <category> test </category>
-          
+        <category>读书笔记《图解http》</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>web http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F04%2F11%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[这是搭建完自动生成的文档，就不删除了Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
 </search>
