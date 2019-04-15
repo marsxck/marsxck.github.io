@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-14T03:56:41.924Z</updated>
+  <updated>2019-04-15T13:03:54.359Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机车系统常识、</title>
+    <link href="http://yoursite.com/2019/04/15/%E6%9C%BA%E8%BD%A6%E7%B3%BB%E7%BB%9F%E5%B8%B8%E8%AF%86%E3%80%81/"/>
+    <id>http://yoursite.com/2019/04/15/机车系统常识、/</id>
+    <published>2019-04-15T12:10:32.000Z</published>
+    <updated>2019-04-15T13:03:54.359Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th style="text-align:center">缩写</th><th style="text-align:center">详细信息</th></tr></thead><tbody><tr><td style="text-align:center">BCU</td><td style="text-align:center">Brake Control Unit制动控制单元</td></tr><tr><td style="text-align:center">CCU</td><td style="text-align:center">Central Control Unit中央控制单元</td></tr><tr><td style="text-align:center">CIR</td><td style="text-align:center">机车综合无线通信设备</td></tr><tr><td style="text-align:center">DDU</td><td style="text-align:center">Driver Display Unit司机显示单元</td></tr><tr><td style="text-align:center">DMI</td><td style="text-align:center">Driver Machine Interface人机交互单元</td></tr><tr><td style="text-align:center">EOT</td><td style="text-align:center">End of Trail列尾</td></tr><tr><td style="text-align:center">ESD</td><td style="text-align:center">Electronic Short Distance电气短距离</td></tr><tr><td style="text-align:center">LKJ</td><td style="text-align:center">列车运行监控装置，LKJ-2000本公司</td></tr><tr><td style="text-align:center">MTBF</td><td style="text-align:center">Mean Time Between Failures平均故障间隔时间</td></tr><tr><td style="text-align:center">MVB</td><td style="text-align:center">Multifunction Vehicle Bus多功能车辆总线</td></tr><tr><td style="text-align:center">RAMS</td><td style="text-align:center">Reliability, Availability, Maintainability and Safety</td></tr><tr><td style="text-align:center">SIL</td><td style="text-align:center">Safety Integrity Level安全完整性等级</td></tr><tr><td style="text-align:center">TCU</td><td style="text-align:center">Traction Control Unit传动控制单元</td></tr></tbody></table><h2 id="纵断面"><a href="#纵断面" class="headerlink" title="纵断面"></a>纵断面</h2><p>160\1 路长160坡度1%</p><h2 id="贯通实验"><a href="#贯通实验" class="headerlink" title="贯通实验"></a>贯通实验</h2><p>规定列车开车后，需要做贯通实验。<br>目的：确认列车管处于贯通状态。<br>步骤：司机操作机车减压，核对车位风压。<br>意义：检查主管路是否泄漏，如果漏风，会意外制动，如果阻塞，则无法制动。</p><h2 id="过分相"><a href="#过分相" class="headerlink" title="过分相"></a>过分相</h2><p>铁路上的电网不是由一个供电所提供的，两个供电所之间电流的相位不一定相同，所以在连接两个供电所电网之间是一段没有电的，这一段电网为分相。把机车通过这一段陈为过分相。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;缩写&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;详细信息&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;te
+      
+    
+    </summary>
+    
+      <category term="专业知识" scheme="http://yoursite.com/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="work 机车" scheme="http://yoursite.com/tags/work-%E6%9C%BA%E8%BD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>基于base64编码的markdown图片插入</title>
