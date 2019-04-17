@@ -35,7 +35,7 @@
   </entry>
   <entry>
     <title><![CDATA[C#从入门到放弃？]]></title>
-    <url>%2F2019%2F04%2F16%2FC%23%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%2F</url>
+    <url>%2F2019%2F04%2F16%2FC%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%2F</url>
     <content type="text"><![CDATA[C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式： 进入dll目录，输入start donet xxx.dll 添加代码 &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;1234567891011121314&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt; &lt;PropertyGroup&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt; &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt; &lt;RootNamespace&gt;hello_C&lt;/RootNamespace&gt; &lt;/PropertyGroup&gt; &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|AnyCPU&apos;&quot;&gt; &lt;WarningLevel&gt;2&lt;/WarningLevel&gt; &lt;/PropertyGroup&gt;&lt;/Project&gt; C#图形应用创建项目选择WPF应用程序，出现设计窗口和逻辑窗口，分别为xaml文件与xaml.cs文件xaml(Extensible Application Markup Language，可扩展应用程序标记语言) ##C#语法关键字如下1abstract do in protected true as double int public try base else interface readonly typeof bool enum internal ref uint break event is return ulong byte explicit lock sbyte unchecked case extern long sealed unsafe catch false namespace short ushort char finally new sizeof using checked fixed null stackalloc virtual class float object static void const for operator string volatile continue foreach out struct while decimal goto override switch default if params this delegate implicit private throw]]></content>
       <categories>
         <category>编程语言</category>
