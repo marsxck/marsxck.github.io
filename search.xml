@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HXD1机车说明]]></title>
+    <url>%2F2019%2F04%2F17%2FHXD1%E6%9C%BA%E8%BD%A6%E8%AF%B4%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[7200KW机车是六轴机车，轴式为 Co’ - Co’ 轴式所谓轴列式就是一台机车转向架的数目和每台转向架上车轴的数量。其中：A-一根动轴 B-每台转向架上2根轴 C-每台转向架上3根轴；转向架的数量用“-”来表示；“0”表示该车轴上装有牵引电机；固定重联机车（一般都是每组机车有2台）为(轴数-轴数)+(轴数-轴数)或者2（轴数-轴数）比如：东风4B型，韶山1型等等机车：每台机车2台转向架，每台转向架上有3根车轴，每根车轴上都装有牵引电机，所以它的轴式就是C0-C0；韶山4/4改型，东风10型等固定重联机车每台机车2台转向架，每台转向架上有2根车轴，每根车轴上都装有牵引电机，每个车组由两台机车组成，所以它的轴式就是(B0-B0)+(B0-B0)或者2（B0-B0）；北京型，东方红型等液力传动内燃机车每台机车2台转向架，每台转向架上有2根车轴，但是液力传动机车动轴不是由牵引电机驱动的因此动轴上并没有安装牵引电机，因此它的轴式是B-B;6K型，韶山7型等电力机车每台机车3台转向架，每台转向架上有2根车轴，每根车轴上都装有牵引电机，所以它的轴式就是B0-B0-B0；韶山3B，东风11G等固定重联机车每台机车2台转向架，每台转向架上有3根车轴，每根车轴上都装有牵引电机，每个车组由两台机车组成，所以它的轴式就是(C0-C0)+(C0-C0)或者2（C0-C0）；北京型固定重联机车每台机车2台转向架，每台转向架上有2根车轴，每个车组由两台机车组成，但是液力传动机车动轴不是由牵引电机驱动的因此动轴上并没有安装牵引电机，所以它的轴式就是(B-B)+(B-B)或者2（B-B）；东风4CK型内燃机车：每台机车2台转向架，每台转向架上有3根车轴，但是每台转向架的中间轴没有安装牵引电机只是从动轴，因此它的轴式就是A1A-A1A；]]></content>
+      <categories>
+        <category>机场常识</category>
+      </categories>
+      <tags>
+        <tag>HXD1 机车</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HXD1机车1]]></title>
+    <url>%2F2019%2F04%2F17%2FHXD1%E6%9C%BA%E8%BD%A61%2F</url>
+    <content type="text"><![CDATA[机车启动机车外部检查 机车必须静止，确认没有任何人在车上工作。 肉眼检查机车外部可能存在的损坏。 检查所有重联机车是否机械、电气、气动连接。 检查砂箱是否加满、盖子是否盖上。 砂箱内的砂子不得少于砂箱的 50％。如果砂子少于 50％，砂箱必须由维护人员加满。 检查外部电源和所有连接电缆是否拆除。 施加停放制动且移开铁鞋。 检查进风口和出风口的清洁情况。 检查机车顶部上是否有电网。 机械间准备 通过司机室台上的机械间灯开关点亮机械间灯。 闭合低压柜所有小自动开关。 低压柜上的控制开关必须在根据机车状态的位置设置。在正常情况下，所有控制开关的位置必须在竖直位。 闭合控制电源柜所有小自动开关。 列车编组中所有的蓄电池都需要单独闭合。 在关断机车蓄电池且等待 10 秒后，才允许重新闭合蓄电池。 通过闭合所有的蓄电池系统，控制系统的一部分同时得电。（CCU1、 CCU2、 TCU1、TCU2、 CIO1、CIO2、 机械间 MIO、 制动控制单元、显示器) 当蓄电池电压可用时，直流/直流逆变器（用于低压电源）闭合。 检查蓄电池表（控制电源柜位置 3 监控单元模块）。工作电压必须不低于 77V。 选择受电弓。 打开总风缸上的截止阀 A10. 运用过程 检查空气管路柜上钥匙阀 B01.99 上钥匙是否在正常位（竖直位）。]]></content>
+      <categories>
+        <category>机车知识</category>
+      </categories>
+      <tags>
+        <tag>HXD1 操作手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LKJ2000说明]]></title>
     <url>%2F2019%2F04%2F16%2FLKJ2000%2F</url>
     <content type="text"><![CDATA[以上为LKJ2000界面上方依次为机车信号灯显示窗口：显示机车当前接收的信号状态（信号灯）速度等级显示窗口：从上至下LC、SD3、SD2、SD1四种速度等级当前速度窗口：机车当前实际运行速度，绿色限制速度窗口：机车当前的允许运行速度，红色距前方信号机距离窗口：列车距前方信号机的距离，黄色信号机类型窗口：显示前方信号机的编号和信号机的种类里程窗口：机车当前的公务里程日期和时间窗口 右侧为系统状态指示灯，自上而下依次为故障：系统与所有单元通信中断时，此灯点亮降级：装置处于降级工作状态时，此灯点亮(监控运行状态和调车状态以外的其它运行状态，叫做监控装置的降级运行状态，2000型面板“降级”指示灯亮表示进入该状态。进入降级运行状态的条件：1、设定参数未按开车键。2、关机30再开。3、监控数据用完。4、故障自启动。)紧急：装置发出紧急制动指令时，此灯亮，停车后灭常用：装置发出常用制动指令时，此灯亮，缓解操作成功后灭。卸载：装置发出卸载动作指令时，此灯亮，满足加载条件后灭。解锁：解除停车控制成功后，此灯亮，4s后灯灭。开车：列车运行参数有效设定完毕后灯亮，按压【开车】键响应后灯灭。调车：处于调车状态时灯亮，退出灯灭。有权：显示有权时本端显示器有操作权，显示无权时本端显示器无操作权，客货/巡检：设定完毕后显示当前的客货状态，显示客本，装置处于客车本务状态，显示货本，装置处于货车本务状态。显示客补，装置处于客车非本务状态，显示货补时，装置处于货车非本务状态。]]></content>
@@ -14,7 +36,13 @@
   <entry>
     <title><![CDATA[C#从入门到放弃？]]></title>
     <url>%2F2019%2F04%2F16%2FC%23%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%EF%BC%9F%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式： 进入dll目录，输入start donet xxx.dll 添加代码 &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;1234567891011121314&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt; &lt;PropertyGroup&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt; &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt; &lt;RootNamespace&gt;hello_C&lt;/RootNamespace&gt; &lt;/PropertyGroup&gt; &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|AnyCPU&apos;&quot;&gt; &lt;WarningLevel&gt;2&lt;/WarningLevel&gt; &lt;/PropertyGroup&gt;&lt;/Project&gt; C#图形应用创建项目选择WPF应用程序，出现设计窗口和逻辑窗口，分别为xaml文件与xaml.cs文件xaml(Extensible Application Markup Language，可扩展应用程序标记语言) ##C#语法关键字如下1abstract do in protected true as double int public try base else interface readonly typeof bool enum internal ref uint break event is return ulong byte explicit lock sbyte unchecked case extern long sealed unsafe catch false namespace short ushort char finally new sizeof using checked fixed null stackalloc virtual class float object static void const for operator string volatile continue foreach out struct while decimal goto override switch default if params this delegate implicit private throw]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>入门 HelloC#</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[机车系统常识、]]></title>

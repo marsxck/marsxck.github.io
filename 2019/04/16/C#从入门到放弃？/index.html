@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="入门 HelloC#,">
 
 
 
@@ -88,14 +88,20 @@
 
 
 
+<meta name="description" content="C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式：  进入dll目录，输入start donet xxx.dll 添加代码 &amp;lt;RuntimeIdentifier&amp;gt;win10-x64&amp;lt;/RuntimeIdentifier&amp;gt;1234567891011121314&amp;lt;Project Sdk=&amp;quot;Microsoft.NET.Sdk&amp;quot;&amp;gt;">
+<meta name="keywords" content="入门 HelloC#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#从入门到放弃？">
 <meta property="og:url" content="http://yoursite.com/2019/04/16/C#从入门到放弃？/index.html">
 <meta property="og:site_name" content="Mars的技术博客">
+<meta property="og:description" content="C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式：  进入dll目录，输入start donet xxx.dll 添加代码 &amp;lt;RuntimeIdentifier&amp;gt;win10-x64&amp;lt;/RuntimeIdentifier&amp;gt;1234567891011121314&amp;lt;Project Sdk=&amp;quot;Microsoft.NET.Sdk&amp;quot;&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-16T02:25:22.951Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190105113855909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MjYxMTc0,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-04-17T14:29:15.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#从入门到放弃？">
+<meta name="twitter:description" content="C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式：  进入dll目录，输入start donet xxx.dll 添加代码 &amp;lt;RuntimeIdentifier&amp;gt;win10-x64&amp;lt;/RuntimeIdentifier&amp;gt;1234567891011121314&amp;lt;Project Sdk=&amp;quot;Microsoft.NET.Sdk&amp;quot;&amp;gt;">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190105113855909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MjYxMTc0,size_16,color_FFFFFF,t_70">
 
 
 
@@ -340,6 +346,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -361,7 +389,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  0
+                  258
                 </span>
               
 
@@ -398,7 +426,15 @@
       
 
       
-        
+        <h2 id="C-控制台程序生成exe"><a href="#C-控制台程序生成exe" class="headerlink" title="C#控制台程序生成exe"></a>C#控制台程序生成exe</h2><p>控制台程序在C#中默认生成dll，运行方式：</p>
+<ol>
+<li>进入dll目录，输入start donet xxx.dll</li>
+<li>添加代码 <code>&lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;</code><br><img src="https://img-blog.csdnimg.cn/20190105113855909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MjYxMTc0,size_16,color_FFFFFF,t_70" alt><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;PropertyGroup&gt;</span><br><span class="line">    &lt;OutputType&gt;Exe&lt;/OutputType&gt;</span><br><span class="line">    &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt;</span><br><span class="line">    &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;</span><br><span class="line">    &lt;RootNamespace&gt;hello_C&lt;/RootNamespace&gt;</span><br><span class="line">  &lt;/PropertyGroup&gt;</span><br><span class="line"></span><br><span class="line">  &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|AnyCPU&apos;&quot;&gt;</span><br><span class="line">    &lt;WarningLevel&gt;2&lt;/WarningLevel&gt;</span><br><span class="line">  &lt;/PropertyGroup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/Project&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="C-图形应用"><a href="#C-图形应用" class="headerlink" title="C#图形应用"></a>C#图形应用</h2><p>创建项目选择WPF应用程序，出现设计窗口和逻辑窗口，分别为xaml文件与xaml.cs文件<br>xaml(Extensible Application Markup Language，可扩展应用程序标记语言)</p>
+<p>##C#语法<br>关键字如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abstract do in protected true as double int public try base else interface readonly typeof bool enum internal ref uint break event is return ulong byte explicit lock sbyte unchecked case extern long sealed unsafe catch false namespace short ushort char finally new sizeof using checked fixed null stackalloc virtual class float object static void const for operator string volatile continue foreach out struct while decimal goto override switch default if params this delegate implicit private throw</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -423,6 +459,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/入门-HelloC/" rel="tag"># 入门 HelloC#</a>
+          
+        </div>
       
 
       
@@ -497,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -513,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -524,7 +575,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -535,7 +586,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -582,6 +633,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-控制台程序生成exe"><span class="nav-number">1.</span> <span class="nav-text">C#控制台程序生成exe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-图形应用"><span class="nav-number">2.</span> <span class="nav-text">C#图形应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -609,7 +676,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">3.4k</span>
   
 </div>
 
