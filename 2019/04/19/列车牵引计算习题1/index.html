@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="复习 列车牵引计算,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Mars的技术博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="简述机车牵引力的定义及分类由传动装置产生、与列车运行方向相同、驱动列车运行并可由司机根据需要调节的外力。 分类按能量传递顺序分：  指示牵引力Fi:假定原动机所做的指示功毫无损失地传到动轮上所得到的机车牵引力。 轮周牵引力F:实际作用在实际作用在轮周上的机车牵引力。 车钩牵引力Fg:除去机车阻力的消耗，实际作用在机车车钩上的牵引力。按能量转换过程限制关系： 牵引电机牵引力:受牵引电机功率限制的轮周">
+<meta name="keywords" content="复习 列车牵引计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="列车牵引计算习题-第一章">
+<meta property="og:url" content="http://yoursite.com/2019/04/19/列车牵引计算习题1/index.html">
+<meta property="og:site_name" content="Mars的技术博客">
+<meta property="og:description" content="简述机车牵引力的定义及分类由传动装置产生、与列车运行方向相同、驱动列车运行并可由司机根据需要调节的外力。 分类按能量传递顺序分：  指示牵引力Fi:假定原动机所做的指示功毫无损失地传到动轮上所得到的机车牵引力。 轮周牵引力F:实际作用在实际作用在轮周上的机车牵引力。 车钩牵引力Fg:除去机车阻力的消耗，实际作用在机车车钩上的牵引力。按能量转换过程限制关系： 牵引电机牵引力:受牵引电机功率限制的轮周">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-19T07:46:58.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="列车牵引计算习题-第一章">
+<meta name="twitter:description" content="简述机车牵引力的定义及分类由传动装置产生、与列车运行方向相同、驱动列车运行并可由司机根据需要调节的外力。 分类按能量传递顺序分：  指示牵引力Fi:假定原动机所做的指示功毫无损失地传到动轮上所得到的机车牵引力。 轮周牵引力F:实际作用在实际作用在轮周上的机车牵引力。 车钩牵引力Fg:除去机车阻力的消耗，实际作用在机车车钩上的牵引力。按能量转换过程限制关系： 牵引电机牵引力:受牵引电机功率限制的轮周">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/19/列车牵引计算习题1/">
+
+
+
+
+
+  <title>列车牵引计算习题-第一章 | Mars的技术博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mars的技术博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Something just like this</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/列车牵引计算习题1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Marsxck">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mars的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">列车牵引计算习题-第一章</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-19T09:07:46+08:00">
+                2019-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机车知识/" itemprop="url" rel="index">
+                    <span itemprop="name">机车知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="简述机车牵引力的定义及分类"><a href="#简述机车牵引力的定义及分类" class="headerlink" title="简述机车牵引力的定义及分类"></a>简述机车牵引力的定义及分类</h2><p>由传动装置产生、与列车运行方向相同、驱动列车运行并可由司机根据需要调节的外力。</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>按能量传递顺序分：</p>
+<ul>
+<li>指示牵引力F<sub>i</sub>:假定原动机所做的指示功毫无损失地传到动轮上所得到的机车牵引力。</li>
+<li>轮周牵引力F:实际作用在实际作用在轮周上的机车牵引力。</li>
+<li>车钩牵引力F<sub>g</sub>:除去机车阻力的消耗，实际作用在机车车钩上的牵引力。<br>按能量转换过程限制关系：</li>
+<li>牵引电机牵引力:受牵引电机功率限制的轮周牵引力。</li>
+<li>粘着牵引力:受轮轨间粘着能力限制的轮周牵引力。</li>
+</ul>
+<h2 id="什么是机车粘着牵引力"><a href="#什么是机车粘着牵引力" class="headerlink" title="什么是机车粘着牵引力"></a>什么是机车粘着牵引力</h2><p>轮周上的切线力大于轮轨间的粘着力时动轮就要发生空转，在不发生空转的前提条件下所能实现的最大轮周牵引力称为粘着牵引力。</p>
+<h2 id="电力机车牵引特性曲线有几种"><a href="#电力机车牵引特性曲线有几种" class="headerlink" title="电力机车牵引特性曲线有几种"></a>电力机车牵引特性曲线有几种</h2><ul>
+<li>牵引电动机的电流特性，机车速度提高时，牵引电机电流减少。</li>
+<li>机车牵引力特性，磁通量一定时，牵引电机电流增大，机车牵引力增大。</li>
+<li>机车牵引特性，运行速度增大，牵引力减少。</li>
+<li>功率特性，速度越高，功率越大，在恒功区达到最大功率。</li>
+<li>电力机车牵引特性曲线，将牵引电机牵引力和粘着牵引力与速度的关系绘制在一张图上。</li>
+</ul>
+<h2 id="机车牵引计算标准有哪些？各有什么含义"><a href="#机车牵引计算标准有哪些？各有什么含义" class="headerlink" title="机车牵引计算标准有哪些？各有什么含义"></a>机车牵引计算标准有哪些？各有什么含义</h2><ul>
+<li>持续电流I<sub>c</sub>，规定的持续电流，牵引电机按此电流工作散热平衡。</li>
+<li>持续速度v，电力机车在最高位满磁场的牵引特性曲线上，有一个实现持续电流的速度。</li>
+<li><p>持续牵引力F<sub>c</sub>，持续速度对应的轮周牵引力。</p>
+</li>
+<li><p>计算速度v<sub>j</sub>及计算牵引力F<sub>j</sub>，列车在限制坡道上的最低通过速度，计算牵引质量的依据，牵规规定了各型机车的最低计算速度及最大计算牵引力，他们分别是机车的持续速度和持续牵引力。计算时因不低于最低计算速度。</p>
+</li>
+<li><p>计算起动牵引力，在起动条件下机车所能发挥的最大牵引力，为了防止空转，电力机车按粘着条件选取机车起动牵引力。25页有例题。</p>
+</li>
+</ul>
+<h2 id="SS4型机车如何确定计算速度？"><a href="#SS4型机车如何确定计算速度？" class="headerlink" title="SS4型机车如何确定计算速度？"></a>SS<sub>4<sub>型机车如何确定计算速度？</sub></sub></h2><p>查表1-4可以确定最低计算速度为51.5km/h，计算速度应该不低于这个值。</p>
+<h2 id="机车牵引力的取值有哪些规定？"><a href="#机车牵引力的取值有哪些规定？" class="headerlink" title="机车牵引力的取值有哪些规定？"></a>机车牵引力的取值有哪些规定？</h2><h3 id="多机牵引"><a href="#多机牵引" class="headerlink" title="多机牵引"></a>多机牵引</h3><p>使用重联操作，每台机车牵引力均取全值；分别操作，第二台及以后的机车牵引力取0.98；补机操作，推送补机的牵引力取0.95。</p>
+<h3 id="最大牵引力"><a href="#最大牵引力" class="headerlink" title="最大牵引力"></a>最大牵引力</h3><p>取机车牵引特性的外包线。</p>
+<h3 id="牵引力使用系数"><a href="#牵引力使用系数" class="headerlink" title="牵引力使用系数"></a>牵引力使用系数</h3><p>进行最高负荷计算时，乘以牵引力使用系数0.9</p>
+<h2 id="SS4型机车不同速度下的牵引力如何确定？"><a href="#SS4型机车不同速度下的牵引力如何确定？" class="headerlink" title="SS4型机车不同速度下的牵引力如何确定？"></a>SS<sub>4<sub>型机车不同速度下的牵引力如何确定？</sub></sub></h2><p>P14 图1-10，P30表1-7</p>
+<h2 id="哪些计算中需要使用牵引力使用系数？"><a href="#哪些计算中需要使用牵引力使用系数？" class="headerlink" title="哪些计算中需要使用牵引力使用系数？"></a>哪些计算中需要使用牵引力使用系数？</h2><p>对各型机车，凡取用最高负荷各速度的牵引力计算列车最大合力、绘制最大合力线图或进行其他计算时。</p>
+<h2 id="电力机车的功率特性图有什么用途？"><a href="#电力机车的功率特性图有什么用途？" class="headerlink" title="电力机车的功率特性图有什么用途？"></a>电力机车的功率特性图有什么用途？</h2><p>直观、形象表示出轮周功率的大小和变换规律，以便对机车功率性能做出评价。</p>
+<h2 id="在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0-9，得出牵引计算中实际使用的最大牵引力Fy，绘制出机车使用牵引力Fy与速度的关系。"><a href="#在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0-9，得出牵引计算中实际使用的最大牵引力Fy，绘制出机车使用牵引力Fy与速度的关系。" class="headerlink" title="在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0.9，得出牵引计算中实际使用的最大牵引力Fy，绘制出机车使用牵引力Fy与速度的关系。"></a>在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0.9，得出牵引计算中实际使用的最大牵引力F<sub>y</sub>，绘制出机车使用牵引力F<sub>y</sub>与速度的关系。</h2><p>使用P30 表1-7的SS<sub>4</sub>轮周牵引力数据表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"># 最大牵引力计算，横坐标为速度，纵坐标为牵引力</span><br><span class="line"># 从启动到32级牵引特性曲线与粘着曲线的交点50km/h，按粘着限制线取粘着牵引力</span><br><span class="line"># 从50到51.5(最低计算速度)按32级特性曲线</span><br><span class="line"># 从51,5到73.2(持续电流限制交点按持续电流限制取线)</span><br><span class="line"># 大于73.2按32-3取</span><br><span class="line">V = np.array([0, 10, 20, 30, 40, 50, 51.5, 57, 63.6, 73.2, 80, 90, 100])</span><br><span class="line">F = np.array([649.8, 554.0, 517.0, 497.0, 484.8, 467.5, 431.6, 394.8, 353.8, 307.8, 242.5, 186.5, 159.9])</span><br><span class="line">Fy = np.dot(F, 0.9)</span><br><span class="line">print(Fy)</span><br><span class="line"># 最开始取粘着牵引力</span><br><span class="line">plt.plot(V, Fy)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p><image src="data:image/png;base64,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"></image></p>
+<h2 id="试计算SS4型电力机车v-0-10-20-30-40-50-km-h的粘着牵引力F-mu-并在计算纸上绘制成粘着牵引力曲线F-mu"><a href="#试计算SS4型电力机车v-0-10-20-30-40-50-km-h的粘着牵引力F-mu-并在计算纸上绘制成粘着牵引力曲线F-mu" class="headerlink" title="试计算SS4型电力机车v=0,10,20,30,40,50 km/h的粘着牵引力F&mu;并在计算纸上绘制成粘着牵引力曲线F&mu;."></a>试计算SS<sub>4</sub>型电力机车v=0,10,20,30,40,50 km/h的粘着牵引力F<sub>&mu;</sub>并在计算纸上绘制成粘着牵引力曲线F<sub>&mu;</sub>.</h2><p>查表P26<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"># 粘着牵引力计算公式Fq = 1000Pu * g * Uj</span><br><span class="line"># 查表P26 SS4 P=2*92 g=9.81 u=0.24+12/(100+8v)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def calcfun(v):</span><br><span class="line">    return 1000*2*92*9.81*(0.24+12/(100+v))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">V = np.array([0, 10, 20, 30, 40, 50])</span><br><span class="line">F = []</span><br><span class="line">for c in V:</span><br><span class="line">    F.append(calcfun(c))</span><br><span class="line">plt.plot(V, F)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<image src="data:image/png;base64, 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">
+
+</image>
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    <div>
+    
+    <div style="text-align:center;color:#ccc;font-size:14px;">
+        -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+    </div>
+    
+</div>
+
+    
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/复习-列车牵引计算/" rel="tag"># 复习 列车牵引计算</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/18/列车牵引计算3/" rel="next" title="列车牵引计算3">
+                <i class="fa fa-chevron-left"></i> 列车牵引计算3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Marsxck</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/marsxck" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="q271537342@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述机车牵引力的定义及分类"><span class="nav-number">1.</span> <span class="nav-text">简述机车牵引力的定义及分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机车粘着牵引力"><span class="nav-number">2.</span> <span class="nav-text">什么是机车粘着牵引力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电力机车牵引特性曲线有几种"><span class="nav-number">3.</span> <span class="nav-text">电力机车牵引特性曲线有几种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机车牵引计算标准有哪些？各有什么含义"><span class="nav-number">4.</span> <span class="nav-text">机车牵引计算标准有哪些？各有什么含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SS4型机车如何确定计算速度？"><span class="nav-number">5.</span> <span class="nav-text">SS4型机车如何确定计算速度？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机车牵引力的取值有哪些规定？"><span class="nav-number">6.</span> <span class="nav-text">机车牵引力的取值有哪些规定？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多机牵引"><span class="nav-number">6.1.</span> <span class="nav-text">多机牵引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大牵引力"><span class="nav-number">6.2.</span> <span class="nav-text">最大牵引力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#牵引力使用系数"><span class="nav-number">6.3.</span> <span class="nav-text">牵引力使用系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SS4型机车不同速度下的牵引力如何确定？"><span class="nav-number">7.</span> <span class="nav-text">SS4型机车不同速度下的牵引力如何确定？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哪些计算中需要使用牵引力使用系数？"><span class="nav-number">8.</span> <span class="nav-text">哪些计算中需要使用牵引力使用系数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电力机车的功率特性图有什么用途？"><span class="nav-number">9.</span> <span class="nav-text">电力机车的功率特性图有什么用途？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0-9，得出牵引计算中实际使用的最大牵引力Fy，绘制出机车使用牵引力Fy与速度的关系。"><span class="nav-number">10.</span> <span class="nav-text">在轮周牵引力数据表中，选择你熟悉的一种货运机型，查出各速度下的最大牵引力，并乘以牵引力使用系数0.9，得出牵引计算中实际使用的最大牵引力Fy，绘制出机车使用牵引力Fy与速度的关系。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#试计算SS4型电力机车v-0-10-20-30-40-50-km-h的粘着牵引力F-mu-并在计算纸上绘制成粘着牵引力曲线F-mu"><span class="nav-number">11.</span> <span class="nav-text">试计算SS4型电力机车v=0,10,20,30,40,50 km/h的粘着牵引力Fμ并在计算纸上绘制成粘着牵引力曲线Fμ.</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marsxck</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">8k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
