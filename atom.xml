@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-19T07:46:58.887Z</updated>
+  <updated>2019-04-19T09:10:50.047Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>列车牵引计算习题-第二章</title>
+    <link href="http://yoursite.com/2019/04/19/%E5%88%97%E8%BD%A6%E7%89%B5%E5%BC%95%E8%AE%A1%E7%AE%97%E4%B9%A0%E9%A2%98-%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+    <id>http://yoursite.com/2019/04/19/列车牵引计算习题-第二章/</id>
+    <published>2019-04-19T08:10:21.000Z</published>
+    <updated>2019-04-19T09:10:50.047Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。"><a href="#什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。" class="headerlink" title="什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。"></a>什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。</h2><p>列车于外界相互作用引起于列车运行方向相反、阻碍列车运行的、不能由司机控制的外力称为列车阻力。<br>总阻力：W，作用在列车、车辆或者列车每kN重力上的阻力，单位是kN。<br>单位阻力:w，平均到机车、车辆或列车每kN重力上的阻力，单位是N/kN。</p><h2 id="基本阻力由哪五部分组成？"><a href="#基本阻力由哪五部分组成？" class="headerlink" title="基本阻力由哪五部分组成？"></a>基本阻力由哪五部分组成？</h2><ul><li>车轴轴承摩擦阻力。用滚动轴承代替滑动轴承，可以降低这一部分阻力。</li><li>轮轨间滑动摩擦阻力。</li><li>轮轨间滚动摩擦阻力。</li><li>冲击阻力。</li><li>气动阻力又称空气阻力。</li></ul><h2 id="货车运行单位基本阻力的试验公式为什么有空重之分？"><a href="#货车运行单位基本阻力的试验公式为什么有空重之分？" class="headerlink" title="货车运行单位基本阻力的试验公式为什么有空重之分？"></a>货车运行单位基本阻力的试验公式为什么有空重之分？</h2><p>空车于重车的总重相差较大，单位基本阻力差别亦大，故空车和重车分别计算。</p><h2 id="列车阻力如何分类？"><a href="#列车阻力如何分类？" class="headerlink" title="列车阻力如何分类？"></a>列车阻力如何分类？</h2><p>按阻力形成的原因分</p><ol><li>基本阻力</li><li>附加阻力<br>按阻力的作用范围分</li></ol><ul><li>总阻力</li><li>单位阻力</li></ul><h2 id="附加阻力有几种-如何计算？"><a href="#附加阻力有几种-如何计算？" class="headerlink" title="附加阻力有几种?如何计算？"></a>附加阻力有几种?如何计算？</h2><ul><li>坡道附加阻力:列车单位坡道阻力在数值上等于坡道的千分数i。</li><li>曲线附加阻力:在圆曲线上运行的车辆，w=600/R。R为曲线半径。</li><li>隧道附加阻力:</li></ul><h2 id="在计算曲线阻力时，缓和曲线的长度如何处理？"><a href="#在计算曲线阻力时，缓和曲线的长度如何处理？" class="headerlink" title="在计算曲线阻力时，缓和曲线的长度如何处理？"></a>在计算曲线阻力时，缓和曲线的长度如何处理？</h2><p>缓和曲线的曲率半径是一个变值，曲线阻力在600/R和0之间变化，简便的办法是将缓和曲线长度按减半计算，L=L-1/2(L1+L2)，可以折算为坡道阻力。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。&quot;&gt;&lt;a href=&quot;#什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。&quot; class=&quot;headerlink&quot; title=&quot;什么叫列车阻力？写出各种阻力的代表符号，并说明各
+      
+    
+    </summary>
+    
+      <category term="机车知识" scheme="http://yoursite.com/categories/%E6%9C%BA%E8%BD%A6%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="复习 列车牵引计算" scheme="http://yoursite.com/tags/%E5%A4%8D%E4%B9%A0-%E5%88%97%E8%BD%A6%E7%89%B5%E5%BC%95%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>列车牵引计算习题-第一章</title>
