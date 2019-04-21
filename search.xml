@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python图片至base64修改版加Python打包]]></title>
+    <url>%2F2019%2F04%2F21%2FPython%E5%9B%BE%E7%89%87%E8%87%B3base64%E4%BF%AE%E6%94%B9%E7%89%88%E5%8A%A0Python%E6%89%93%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[之前写了一个图片转换成base64的小工具，这次markdown特化了一下，直接黏贴就好。123456789101112131415161718import base64import tkinter as tkfrom tkinter import filedialogimport win32clipboard as wimport win32conroot = tk.Tk() # 创建一个实例root.withdraw() # 隐藏窗口file_path = filedialog.askopenfilename() # 获取路径f = open(file_path, &apos;rb&apos;) # y以二进制形式打开ls_f = base64.b64encode(f.read()) # 读取文件，转换为64位编码f.close()new = b&apos;&lt;image src=&quot;data:image/png;base64,&apos;+ls_f+b&apos;&quot;/&gt;&apos; # 特化部分w.OpenClipboard()w.EmptyClipboard()w.SetClipboardData(win32con.CF_TEXT, new)w.CloseClipboard()print(ls_f) pyinstaller打包见下链接官方手册http://www.pyinstaller.org/]]></content>
+      <categories>
+        <category>python小工具</category>
+      </categories>
+      <tags>
+        <tag>Python Pyinstaller</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[列车牵引计算习题-第二章]]></title>
     <url>%2F2019%2F04%2F19%2F%E5%88%97%E8%BD%A6%E7%89%B5%E5%BC%95%E8%AE%A1%E7%AE%97%E4%B9%A0%E9%A2%98-%E7%AC%AC%E4%BA%8C%E7%AB%A0%2F</url>
     <content type="text"><![CDATA[什么叫列车阻力？写出各种阻力的代表符号，并说明各个符号的意义和单位。列车于外界相互作用引起于列车运行方向相反、阻碍列车运行的、不能由司机控制的外力称为列车阻力。总阻力：W，作用在列车、车辆或者列车每kN重力上的阻力，单位是kN。单位阻力:w，平均到机车、车辆或列车每kN重力上的阻力，单位是N/kN。 基本阻力由哪五部分组成？ 车轴轴承摩擦阻力。用滚动轴承代替滑动轴承，可以降低这一部分阻力。 轮轨间滑动摩擦阻力。 轮轨间滚动摩擦阻力。 冲击阻力。 气动阻力又称空气阻力。 货车运行单位基本阻力的试验公式为什么有空重之分？空车于重车的总重相差较大，单位基本阻力差别亦大，故空车和重车分别计算。 列车阻力如何分类？按阻力形成的原因分 基本阻力 附加阻力按阻力的作用范围分 总阻力 单位阻力 附加阻力有几种?如何计算？ 坡道附加阻力:列车单位坡道阻力在数值上等于坡道的千分数i。 曲线附加阻力:在圆曲线上运行的车辆，w=600/R。R为曲线半径。 隧道附加阻力: 在计算曲线阻力时，缓和曲线的长度如何处理？缓和曲线的曲率半径是一个变值，曲线阻力在600/R和0之间变化，简便的办法是将缓和曲线长度按减半计算，L=L-1/2(L1+L2)，可以折算为坡道阻力。 机车、车辆的启动基本阻力是如何规定的？只有在机车车辆起动时才存在的基本阻力，称列车起动基本阻力，用wq表示。据《牵规》： 电力机车和内燃机车的起动基本阻力w‘q取5N/kN 滚动轴承货车的单位起动基本阻力w‘’q取3.5N/kN 列车运行阻力如何计算？参考P58页例题 列车运行总全阻力计算(kN) 首先根据列车速度查P46表2-1得到此速度下的机车单位基本阻力w‘0，再查P47表2-2得到此速度下的滚动轴承货车单位基本阻力w‘’0。 带入列车运行总阻力公式 其中P为机车计算质量，查P26表1-4得到，G为货车计算质量，g为重力加速度，i是坡道千分数。列车运行单位全阻力计算(N/kN) 计算总基本阻力W0，为上书全阻力去掉坡道附加阻力，即去掉i乘项 计算单位基本阻力，w0=W0*103/((P+G)g) 单位全阻力:w=w0+ij 按机车、车辆试验公式，计算v=80km/h时的w‘0和w‘’0的值。 假设机车为SS1，公式为P45页2-2，带入速度80km/h，得到机车的运行单位基本阻力w‘0约为5.818 滚动轴承货车单位基本阻力为P47公式2-19，带入得到其运行单位基本阻力w‘’0为2.104 SS4型机车牵引G = 4000t的重货车(滚动轴承)，牵引运行时： 第一问12345678910111213141516171819202122import matplotlib.pyplot as pltimport numpy as np# 计算在不同i下的列车总阻力力给出速度关系曲线V = [20, 40, 60, 80]# i为0,2,4,6时F0 = [47.0, 57.8, 73.3, 103.1]F2 = [129.1, 139.9, 155.4, 185.2]F4 = [211.2, 222, 237.5, 267.3]F6 = [293.3, 304.1, 319.6, 349.4]plt.plot(V, F0, color=&apos;red&apos;, label=&apos;i=0&apos;)plt.plot(V, F2, color=&apos;black&apos;, label=&apos;i=2&apos;)plt.plot(V, F4, color=&apos;blue&apos;, label=&apos;i=4&apos;)plt.plot(V, F6, color=&apos;yellow&apos;, label=&apos;i=6&apos;)plt.xlim(15, 110)plt.xlabel(&apos;km/h&apos;)plt.ylabel(&apos;kN&apos;)plt.legend()plt.show() 第二问这里取P30页的最大牵引力数据作曲线 第三问可从图中估计出交点速度，在此级位上坡道上行驶速度应小于交点速度，否则牵引力小于阻力，可能会向后溜车，所以该点意义是坡道上行驶最大速度。 SS4型车牵引G=4000t的货物列车(滚动轴承)，问改列车在i=8的坡道上停车后是否能够再起动？SS4型车起动牵引力取速度等于0时的粘着牵引力。参考P25页例子Fq=Pg&mu;j=1000x184x9.81x(0.24+12/100)=649.8kNSS4型车在坡道上的起动全阻力，参考P58：得到474.7kN起动牵引力大于起动全阻力，所以可以再起动。]]></content>
@@ -25,7 +36,7 @@
   <entry>
     <title><![CDATA[列车牵引计算3]]></title>
     <url>%2F2019%2F04%2F18%2F%E5%88%97%E8%BD%A6%E7%89%B5%E5%BC%95%E8%AE%A1%E7%AE%973%2F</url>
-    <content type="text"><![CDATA[列车制动力定义由制动装置引起的、与列车运行方向相反的、司机可根据需要控制其大小的外力，称为制动力，用字母B表示。 产生制动力的方法 摩擦制动：通常指将空气通过机械传动装置传到闸瓦或闸片上，利用闸瓦与车轮踏面或者闸片与制动盘的摩擦产生制动力。 动力制动指以靠机车的动力机械通过传动装置产生的制动力，包括电阻制动、再生制动、电磁涡流制动、液力制动等。]]></content>
+    <content type="text"><![CDATA[列车制动力定义由制动装置引起的、与列车运行方向相反的、司机可根据需要控制其大小的外力，称为制动力，用字母B表示。 产生制动力的方法 摩擦制动：通常指将空气通过机械传动装置传到闸瓦或闸片上，利用闸瓦与车轮踏面或者闸片与制动盘的摩擦产生制动力。 动力制动：以靠机车的动力机械通过传动装置产生的制动力，包括电阻制动、再生制动、电磁涡流制动、液力制动等。闸瓦制动原理在司机的操纵下，制动缸的空气压力通过基础制动装置，使闸瓦产生压力作用于滚动的车轮踏面，对车轮中心形成一个力矩，从而产生制动力。每一块闸瓦产生的制动力为：B=K*&phi;k闸瓦制动限制大小收到轮轨间粘着力的限制，如每轴作用在钢轨上的垂直载荷为q0、轮轨间的粘着系数为&mu;z，每轴上的闸瓦压力为&sum;K，则有：当制动力增大到轮轨粘着力时，车轮就会抱死滑行，制动力就变成了轮轨间的滑动摩檫力，滑行时，制动力较小，反而会延长滑行距离，擦伤车轮。下面分析滑动的情况： 速度v降低，&mu;j略微增大，&phi;k急剧增加，不等式右边减小，易发生滑行(快停车时)。 当轨面状况不好，粘着系数下降，不等式右边减小，易滑行。 紧急制动，K值增大，易滑行。 闸瓦摩擦系数&phi;k闸瓦压力K一定时，制动力取决于摩擦系数&phi;k，所以要求摩擦系数高且稳定。 闸瓦摩擦系数试验公式 闸瓦压力车辆每块闸瓦的实算闸瓦压力K: 盘型制动每块闸片的实算压力K’按下计算： 闸片压力K’作用在制动盘上，按照下面的公式进行换算，变成车轮踏面压力K: 各参数参考P65 制动率制动率是闸瓦压力与重力之比，每kN重力上所具有的闸瓦压力。 轴制动率：设计中检验有无滑行的重要依据。 列车制动率：表示列车所具有的制动能力。 列车制动力计算的实算法不同类型的车，闸瓦压力各不相同，摩擦系数也不同，需要分别计算然后求和。 列车单位制动力：b=（1000xB)/((P+G)xg) (N/kN)具体参考P67页例题 换算摩擦系数为了简化计算在进行摩擦系数计算时取K=25kN，带入P64页公式。高摩合成闸瓦取K=20kN，有： 对于盘形制动合成闸片，K’=20kN： 具体数值可查P69表]]></content>
       <categories>
         <category>机车知识</category>
       </categories>
@@ -60,7 +71,7 @@
     <url>%2F2019%2F04%2F17%2FHXD1%E6%9C%BA%E8%BD%A6%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[7200KW机车是六轴机车，轴式为 Co’ - Co’ 轴式所谓轴列式就是一台机车转向架的数目和每台转向架上车轴的数量。其中：A-一根动轴 B-每台转向架上2根轴 C-每台转向架上3根轴；转向架的数量用“-”来表示；“0”表示该车轴上装有牵引电机；固定重联机车（一般都是每组机车有2台）为(轴数-轴数)+(轴数-轴数)或者2（轴数-轴数）比如：东风4B型，韶山1型等等机车：每台机车2台转向架，每台转向架上有3根车轴，每根车轴上都装有牵引电机，所以它的轴式就是C0-C0；韶山4/4改型，东风10型等固定重联机车每台机车2台转向架，每台转向架上有2根车轴，每根车轴上都装有牵引电机，每个车组由两台机车组成，所以它的轴式就是(B0-B0)+(B0-B0)或者2（B0-B0）；北京型，东方红型等液力传动内燃机车每台机车2台转向架，每台转向架上有2根车轴，但是液力传动机车动轴不是由牵引电机驱动的因此动轴上并没有安装牵引电机，因此它的轴式是B-B;6K型，韶山7型等电力机车每台机车3台转向架，每台转向架上有2根车轴，每根车轴上都装有牵引电机，所以它的轴式就是B0-B0-B0；韶山3B，东风11G等固定重联机车每台机车2台转向架，每台转向架上有3根车轴，每根车轴上都装有牵引电机，每个车组由两台机车组成，所以它的轴式就是(C0-C0)+(C0-C0)或者2（C0-C0）；北京型固定重联机车每台机车2台转向架，每台转向架上有2根车轴，每个车组由两台机车组成，但是液力传动机车动轴不是由牵引电机驱动的因此动轴上并没有安装牵引电机，所以它的轴式就是(B-B)+(B-B)或者2（B-B）；东风4CK型内燃机车：每台机车2台转向架，每台转向架上有3根车轴，但是每台转向架的中间轴没有安装牵引电机只是从动轴，因此它的轴式就是A1A-A1A；]]></content>
       <categories>
-        <category>机场常识</category>
+        <category>机车常识</category>
       </categories>
       <tags>
         <tag>HXD1 机车</tag>
@@ -89,7 +100,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C#从入门到放弃？]]></title>
+    <title><![CDATA[C#从入门到放弃？1]]></title>
     <url>%2F2019%2F04%2F16%2FC%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%2F</url>
     <content type="text"><![CDATA[C#控制台程序生成exe控制台程序在C#中默认生成dll，运行方式： 进入dll目录，输入start donet xxx.dll 添加代码 &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;1234567891011121314&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt; &lt;PropertyGroup&gt; &lt;OutputType&gt;Exe&lt;/OutputType&gt; &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt; &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt; &lt;RootNamespace&gt;hello_C&lt;/RootNamespace&gt; &lt;/PropertyGroup&gt; &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|AnyCPU&apos;&quot;&gt; &lt;WarningLevel&gt;2&lt;/WarningLevel&gt; &lt;/PropertyGroup&gt;&lt;/Project&gt; C#图形应用创建项目选择WPF应用程序，出现设计窗口和逻辑窗口，分别为xaml文件与xaml.cs文件xaml(Extensible Application Markup Language，可扩展应用程序标记语言) C#语法关键字如下1abstract do in protected true as double int public try base else interface readonly typeof bool enum internal ref uint break event is return ulong byte explicit lock sbyte unchecked case extern long sealed unsafe catch false namespace short ushort char finally new sizeof using checked fixed null stackalloc virtual class float object static void const for operator string volatile continue foreach out struct while decimal goto override switch default if params this delegate implicit private throw 标识符如下1dynamic join set from let value get orderby var group partial where into select yield 命名建议驼峰命名 变量decimal 货币值 比double有更高的精度和更小的范围 128位 赋值未在声明时赋值的变量在C#中不可使用]]></content>
       <categories>
