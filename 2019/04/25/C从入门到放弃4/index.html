@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Mars的技术博客">
 <meta property="og:description" content="C#中的枚举123enum Season &amp;#123; Spring, Summer, Fall, Winter&amp;#125;; //声明枚举Season colorful = Season.fall;Console.WriteLine(Colorful);  //可自动匹配 一般情况下枚举第一个元素对应0，也可显示指定1enum Season : short &amp;#123; Spring, Summ">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-26T03:41:08.881Z">
+<meta property="og:updated_time" content="2019-04-26T09:05:23.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#从入门到放弃4">
 <meta name="twitter:description" content="C#中的枚举123enum Season &amp;#123; Spring, Summer, Fall, Winter&amp;#125;; //声明枚举Season colorful = Season.fall;Console.WriteLine(Colorful);  //可自动匹配 一般情况下枚举第一个元素对应0，也可显示指定1enum Season : short &amp;#123; Spring, Summ">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  516
+                  937
                 </span>
               
 
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  4
                 </span>
               
             </div>
@@ -440,6 +440,25 @@
 <p>前提是右侧的结构字段都初始化了。</p>
 <h2 id="C-数组"><a href="#C-数组" class="headerlink" title="C#数组"></a>C#数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int[] pins;</span><br><span class="line">pins = new int[4];</span><br><span class="line">pins = new int[4]&#123;9, 3, 2, 1&#125;;//大括号力的数值的数量必须和创建的数组实例的大小完全匹配</span><br><span class="line">pins = new int[4]&#123;random%10，random%10，random%10，random%10&#125;;  //可以是运行时计算的值</span><br><span class="line">int[] pins = &#123;9, 3, 7, 2&#125;l</span><br><span class="line">Time[] s = &#123;new Time(12, 30), new Time(5, 30)&#125;;</span><br><span class="line">var names = new[]&#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;;//隐式推断</span><br><span class="line">var name = new[]&#123;new &#123;Name = &quot;John&quot;, Age = 44&#125;&#125;; //数组元素都是匿名类型。</span><br></pre></td></tr></table></figure>
 <p>数组的大小不是声明的一部分，数组是引用类型。<br>在声明一个引用类型的时候，不会马上为对象分配内存，只有在用new关键字创建实例的时候，才会真正分配，所以在声明一个数组变量的时候不需要声明它的大小，只有在实际创建数组的时候才可以指定数组的大小。</p>
+<h2 id="foreach语句"><a href="#foreach语句" class="headerlink" title="foreach语句"></a>foreach语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int[] pins = &#123;9, 3, 7, 2&#125;;</span><br><span class="line">foreach(int pin in pins)</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(pin);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>foreach语句声明了一个循环变量，自动获取数组中每个元素的值，变量类型必须与数组元素类型相匹配。</p>
+<h2 id="复制数组"><a href="#复制数组" class="headerlink" title="复制数组"></a>复制数组</h2><p>数组是引用类型，这意味着在复制了一个数组变量得到对同一个数组的两个引用，真实的复制数组需要一个一个赋值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//for一个一个赋值</span><br><span class="line">int[] pins = &#123;9, 3, 7, 2&#125;;</span><br><span class="line">int[] copy = new int[pins.Length];</span><br><span class="line">for(int i = 0;i&lt;copy.Length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	copy[i] = pins[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//CopyTO方法赋值</span><br><span class="line">pins.CoptTo(copy, 0);</span><br><span class="line"></span><br><span class="line">//Copy方法复制</span><br><span class="line">Array.Copy(pins, copy, copy.Length);</span><br><span class="line"></span><br><span class="line">//Clone方法复制</span><br><span class="line">int[] copy = (int[])pins.Clone();</span><br></pre></td></tr></table></figure></p>
+<p>以上都为浅拷贝</p>
+<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int[,] items = new int[4, 6];//声明数组，4行6列</span><br><span class="line">item[2, 4] = 99;</span><br><span class="line">item[2, 4] = item[3, 4];</span><br><span class="line">item[2, 4]++;</span><br></pre></td></tr></table></figure>
+<h2 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a>集合类</h2><ul>
+<li><p>ArrayList//类似链表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ArrayList number = new ArrayList();</span><br><span class="line">number.Add(1);  //添加元素</span><br><span class="line">number.Insert(number.Count-1, 99);  //在索引Count-1处插入元素</span><br><span class="line">number.Remove(7)；   //移除值为7的第一个元素</span><br><span class="line">number.RemoveAt(6);  //移除索引为6的元素，即第7个元素</span><br><span class="line">//使用foreach便利当前的11个元素</span><br><span class="line">foreach(int number in numbers)</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Quene</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Quene numbers = new Quene();</span><br><span class="line">numbers.Enquene(1);    //加入队列</span><br><span class="line">//遍历队列</span><br><span class="line">foreach(int number in numbers)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//出队队列</span><br><span class="line">number.Dequeue();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stack集合类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Stack number = new Stack();</span><br><span class="line">numbers.Push(1);    //入栈</span><br><span class="line">numbers.Pop();     //出栈</span><br><span class="line">foreach(int number in number)</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hashtable类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Hashtable ages = new Hashtable();</span><br><span class="line">//填充1</span><br><span class="line">ages[&quot;asa&quot;] = 44;</span><br><span class="line"></span><br><span class="line">//遍历，返回的是DictionaryEntry，它允许通过Key属性和Value属性进行元素访问</span><br><span class="line">foreach(DictionaryEntry element in ages)</span><br><span class="line">&#123;</span><br><span class="line">	string name = (string)element.Key;</span><br><span class="line">	int age = (int)element.Value;</span><br><span class="line">	Console.WriteLine(&quot;Name: &#123;0&#125;, Age: &#123;1&#125;&quot;, name, age);-</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -481,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/25/C从入门到放弃3/" rel="next" title="C#从入门到放弃3">
-                <i class="fa fa-chevron-left"></i> C#从入门到放弃3
+              <a href="/2019/04/25/高速铁路列车运行控制技术/" rel="next" title="高速铁路列车运行控制技术-1">
+                <i class="fa fa-chevron-left"></i> 高速铁路列车运行控制技术-1
               </a>
             
           </div>
@@ -490,6 +509,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/25/C从入门到放弃3/" rel="prev" title="C#从入门到放弃3">
+                C#从入门到放弃3 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -644,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中的枚举"><span class="nav-number">1.</span> <span class="nav-text">C#中的枚举</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中的结构"><span class="nav-number">2.</span> <span class="nav-text">C#中的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中结构和类"><span class="nav-number">3.</span> <span class="nav-text">C#中结构和类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造器初始化"><span class="nav-number">4.</span> <span class="nav-text">构造器初始化</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Console-WriteLine-自动调用ToString方法"><span class="nav-number"></span> <span class="nav-text">Console.WriteLine()自动调用ToString方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#结构复制"><span class="nav-number">1.</span> <span class="nav-text">结构复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-数组"><span class="nav-number">2.</span> <span class="nav-text">C#数组</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中的枚举"><span class="nav-number">1.</span> <span class="nav-text">C#中的枚举</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中的结构"><span class="nav-number">2.</span> <span class="nav-text">C#中的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中结构和类"><span class="nav-number">3.</span> <span class="nav-text">C#中结构和类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造器初始化"><span class="nav-number">4.</span> <span class="nav-text">构造器初始化</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Console-WriteLine-自动调用ToString方法"><span class="nav-number"></span> <span class="nav-text">Console.WriteLine()自动调用ToString方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#结构复制"><span class="nav-number">1.</span> <span class="nav-text">结构复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-数组"><span class="nav-number">2.</span> <span class="nav-text">C#数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#foreach语句"><span class="nav-number">3.</span> <span class="nav-text">foreach语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制数组"><span class="nav-number">4.</span> <span class="nav-text">复制数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多维数组"><span class="nav-number">5.</span> <span class="nav-text">多维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合类"><span class="nav-number">6.</span> <span class="nav-text">集合类</span></a></li></ol></li></div>
             
 
           </div>
@@ -678,7 +701,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.7k</span>
+    <span title="Site words total count">18.2k</span>
   
 </div>
 
