@@ -91,14 +91,14 @@
 <meta name="description" content="内核实现基本原理VxWorks内核维护三个队列：tick、Ready、active。除此之外，还有一个队列涉及任务，即资源等待队列，可以是VxWorks内核提供的，也可以是用户提供，此处为pend队列。  tick队列，调用taskDelay函数后，任务所处的队列，此时任务设置为Delay，无资格竞争CPU。 ready队列，有资格竞争使用CPU的所以任务，队列以优先级排序，队列头是除了运行的任务">
 <meta name="keywords" content="Vxworks work 笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VxWorks开发-1">
+<meta property="og:title" content="VxWorks开发-任务">
 <meta property="og:url" content="http://yoursite.com/2019/05/05/VxWorks开发/index.html">
 <meta property="og:site_name" content="Mars的技术博客">
 <meta property="og:description" content="内核实现基本原理VxWorks内核维护三个队列：tick、Ready、active。除此之外，还有一个队列涉及任务，即资源等待队列，可以是VxWorks内核提供的，也可以是用户提供，此处为pend队列。  tick队列，调用taskDelay函数后，任务所处的队列，此时任务设置为Delay，无资格竞争CPU。 ready队列，有资格竞争使用CPU的所以任务，队列以优先级排序，队列头是除了运行的任务">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T06:46:15.226Z">
+<meta property="og:updated_time" content="2019-05-05T08:42:34.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VxWorks开发-1">
+<meta name="twitter:title" content="VxWorks开发-任务">
 <meta name="twitter:description" content="内核实现基本原理VxWorks内核维护三个队列：tick、Ready、active。除此之外，还有一个队列涉及任务，即资源等待队列，可以是VxWorks内核提供的，也可以是用户提供，此处为pend队列。  tick队列，调用taskDelay函数后，任务所处的队列，此时任务设置为Delay，无资格竞争CPU。 ready队列，有资格竞争使用CPU的所以任务，队列以优先级排序，队列头是除了运行的任务">
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>VxWorks开发-1 | Mars的技术博客</title>
+  <title>VxWorks开发-任务 | Mars的技术博客</title>
   
 
 
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VxWorks开发-1</h1>
+          <h1 class="post-title" itemprop="name headline">VxWorks开发-任务</h1>
         
 
         <div class="post-meta">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.2k
+                  1.7k
                 </span>
               
 
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  6
                 </span>
               
             </div>
@@ -447,7 +447,7 @@
 <li>信号处理函数</li>
 <li>其他辅助信息，任务运行总时间，任务最终返回值</li>
 </ul>
-<h2 id="VxWorks系统时钟"><a href="#VxWorks系统时钟" class="headerlink" title="VxWorks系统时钟"></a>VxWorks系统时钟</h2><p>每当时钟前进一个滴答(Tick),操作系统会响应一次中断，该中断为进程调度和定时器的触发点。</p>
+<h2 id="VxWorks系统时钟"><a href="#VxWorks系统时钟" class="headerlink" title="VxWorks系统时钟"></a>VxWorks系统时钟</h2><p>每当时钟前进一个滴答(Tick),操作系统会响应一次中断，该中断为任务调度和定时器的触发点。</p>
 <h2 id="任务操作函数"><a href="#任务操作函数" class="headerlink" title="任务操作函数"></a>任务操作函数</h2><p>使能RR调度接口，整体上仍然是优先级调度，在高有限级存在多个任务运行时，RR调度才有效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STATUS kernelTimeSlice</span><br><span class="line">&#123;</span><br><span class="line">	int ticks</span><br><span class="line">&#125;</span><br><span class="line">//循环调度方式，0则禁用，循环时间为ticks*tick S</span><br></pre></td></tr></table></figure></p>
 <p>在启动RR调度后，可以以参数0再次调用来禁用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskPrioritySet</span><br><span class="line">&#123;</span><br><span class="line">	int tid,  //任务id，taskSpawn的返回值，</span><br><span class="line">	int newPriority  //新设定的优先级</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -469,7 +469,25 @@
 </li>
 </ul>
 <h2 id="任务名"><a href="#任务名" class="headerlink" title="任务名"></a>任务名</h2><p>VxWork支持任意长度任务名，并不要求任务名的全局唯一性，任务名控制在11B以内<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskShow</span><br><span class="line">&#123;</span><br><span class="line">	int tid,</span><br><span class="line">	int level    /*0显示大概信息，1显示详细信息，2显示所有任务信息*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="结束任务"><a href="#结束任务" class="headerlink" title="结束任务"></a>结束任务</h2>
+<h2 id="结束任务"><a href="#结束任务" class="headerlink" title="结束任务"></a>结束任务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskDelete</span><br><span class="line">&#123;</span><br><span class="line">	int tid    //为0结束自己</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当删除一个占用资源没有释放的任务时，可能会导致崩溃。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskSafe(void)</span><br><span class="line">STATUS taskUnSafe(void)</span><br></pre></td></tr></table></figure></p>
+<p>在一个任务调用了taskSafe以后，在taskUnSafe之前，其他任何任务不能对其进行删除操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskSuspend(int tid)         /*挂起任务*/</span><br><span class="line">STATUS taskResume(int tid)			/*恢复任务*/</span><br><span class="line">STATUS taskDelay(int ticks)         /*将正在运行的任务转为睡眠态，使用NO_WAIT作为参数时，VxWorks将当前任务置于ready队列所有相同优先级的任务之后*/</span><br></pre></td></tr></table></figure></p>
+<h2 id="钩子函数–实现底功耗"><a href="#钩子函数–实现底功耗" class="headerlink" title="钩子函数–实现底功耗"></a>钩子函数–实现底功耗</h2><p>可以使用一个最低优先级的后台任务加上一个任务调度钩子函数实现平台低功耗。当最低优先级后台任务被执行，触发钩子函数，使平台进入低功耗状态。</p>
+<ul>
+<li><p>任务创建钩子函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskCreateHookAdd</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR createHook    /*当一个新任务被创建时调用的钩子函数*/</span><br><span class="line">&#125;</span><br><span class="line">void createHook</span><br><span class="line">&#123;</span><br><span class="line">	WIND_TCB *pNewTcb   /*创建钩子函数形式，将会获取新创建的任务的TCB*/</span><br><span class="line">&#125;</span><br><span class="line">void taskCreateHookDelete</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR createHook   /*注销通过taskCreateHookAdd注册的钩子*/ </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任务调度钩子函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskSwitchHookAdd</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR switchHook   /*注册发生任务调度时调用的钩子函数*/</span><br><span class="line">&#125;</span><br><span class="line">void switchHook          /*函数原型*/</span><br><span class="line">&#123;</span><br><span class="line">	WIND_TCB *pOldTcb,		/*被调度出去的任务TCB*/</span><br><span class="line">	WIND_TCB *pNewTcb		/*抢占了CPU的任务TCB*/</span><br><span class="line">&#125;</span><br><span class="line">STATUS taskSwitchHookDelete</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR switchHook		/*注销*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任务删除钩子函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">STATUS taskDeleteHookAdd</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR deleteHook	/*注册在任务消亡时被调用的钩子函数*/</span><br><span class="line">&#125;</span><br><span class="line">void deleteHook</span><br><span class="line">&#123;</span><br><span class="line">	WIND_TCB *pTcb     /*函数原型*/</span><br><span class="line">&#125;</span><br><span class="line">STATUS taskDeleteHookDelete</span><br><span class="line">&#123;</span><br><span class="line">	FUNCPTR deleteHook   /*注销*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>钩子函数查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void taskCreateHookShow(void)   /*显示当前注册到系统的所有在任务被创建时被调用的钩子函数列表*/</span><br><span class="line">void taskDeleteHookShow(void)	/*显示当前注册到系统的所有在任务被删除时被调用的钩子函数列表*/</span><br><span class="line">void taskSwitchHookShow(void)	/*显示当前注册到系统的所有在任务被调度时被调用的钩子函数列表*/</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
       
     </div>
     
@@ -519,6 +537,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/05/VxWorks开发-任务调度/" rel="prev" title="VxWorks开发-任务调度">
+                VxWorks开发-任务调度 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -595,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -606,7 +628,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -617,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -673,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内核实现基本原理"><span class="nav-number">1.</span> <span class="nav-text">内核实现基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务创建流程"><span class="nav-number">2.</span> <span class="nav-text">任务创建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务优先级"><span class="nav-number">3.</span> <span class="nav-text">任务优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VxWorks栈"><span class="nav-number">4.</span> <span class="nav-text">VxWorks栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务上下文"><span class="nav-number">5.</span> <span class="nav-text">任务上下文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VxWorks系统时钟"><span class="nav-number">6.</span> <span class="nav-text">VxWorks系统时钟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务操作函数"><span class="nav-number">7.</span> <span class="nav-text">任务操作函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务栈"><span class="nav-number">8.</span> <span class="nav-text">任务栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务名"><span class="nav-number">9.</span> <span class="nav-text">任务名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束任务"><span class="nav-number">10.</span> <span class="nav-text">结束任务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内核实现基本原理"><span class="nav-number">1.</span> <span class="nav-text">内核实现基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务创建流程"><span class="nav-number">2.</span> <span class="nav-text">任务创建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务优先级"><span class="nav-number">3.</span> <span class="nav-text">任务优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VxWorks栈"><span class="nav-number">4.</span> <span class="nav-text">VxWorks栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务上下文"><span class="nav-number">5.</span> <span class="nav-text">任务上下文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VxWorks系统时钟"><span class="nav-number">6.</span> <span class="nav-text">VxWorks系统时钟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务操作函数"><span class="nav-number">7.</span> <span class="nav-text">任务操作函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务栈"><span class="nav-number">8.</span> <span class="nav-text">任务栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务名"><span class="nav-number">9.</span> <span class="nav-text">任务名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束任务"><span class="nav-number">10.</span> <span class="nav-text">结束任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#钩子函数–实现底功耗"><span class="nav-number">11.</span> <span class="nav-text">钩子函数–实现底功耗</span></a></li></ol></div>
             
 
           </div>
@@ -707,7 +729,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.5k</span>
+    <span title="Site words total count">20.1k</span>
   
 </div>
 
